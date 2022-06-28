@@ -17,25 +17,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-bi-Hil">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="261" width="414" height="601"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-xr-jbd">
+                                <rect key="frame" x="45" y="148" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-Nb-bhI">
+                                <rect key="frame" x="45" y="78" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DgR-bi-Hil" secondAttribute="trailing" id="Ltw-rf-zSD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DgR-bi-Hil" secondAttribute="bottom" id="Xs3-Be-vH8"/>
-                            <constraint firstItem="DgR-bi-Hil" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aN0-hJ-YTc"/>
-                            <constraint firstItem="DgR-bi-Hil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s6b-6v-mZz"/>
+                            <constraint firstItem="z4B-Nb-bhI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06x-gy-sw7"/>
+                            <constraint firstItem="DgR-bi-Hil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5sU-wj-y9G"/>
+                            <constraint firstItem="z4B-Nb-bhI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="OAW-Ko-Yb3"/>
+                            <constraint firstItem="z4B-Nb-bhI" firstAttribute="trailing" secondItem="QIK-xr-jbd" secondAttribute="trailing" id="SP8-im-FvS"/>
+                            <constraint firstItem="DgR-bi-Hil" firstAttribute="top" secondItem="QIK-xr-jbd" secondAttribute="bottom" constant="79" id="Uv3-dP-EZP"/>
+                            <constraint firstItem="QIK-xr-jbd" firstAttribute="top" secondItem="z4B-Nb-bhI" secondAttribute="bottom" constant="36" id="aO9-1E-SSE"/>
+                            <constraint firstItem="QIK-xr-jbd" firstAttribute="centerX" secondItem="DgR-bi-Hil" secondAttribute="centerX" id="eNm-GM-8py"/>
+                            <constraint firstItem="z4B-Nb-bhI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="f7X-hS-MFK"/>
+                            <constraint firstItem="z4B-Nb-bhI" firstAttribute="leading" secondItem="QIK-xr-jbd" secondAttribute="leading" id="n1S-7B-E6b"/>
+                            <constraint firstItem="DgR-bi-Hil" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qrN-el-Us3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentTextfield" destination="QIK-xr-jbd" id="nmH-Te-0k7"/>
                         <outlet property="mapView" destination="DgR-bi-Hil" id="de4-xa-acf"/>
+                        <outlet property="nameTextfield" destination="z4B-Nb-bhI" id="Wwq-D0-2kt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="105"/>
+            <point key="canvasLocation" x="-26.086956521739133" y="104.46428571428571"/>
         </scene>
     </scenes>
     <resources>
