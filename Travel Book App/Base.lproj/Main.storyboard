@@ -17,18 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-bi-Hil">
-                                <rect key="frame" x="0.0" y="261" width="414" height="601"/>
+                                <rect key="frame" x="0.0" y="261" width="414" height="516"/>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-xr-jbd">
-                                <rect key="frame" x="45" y="148" width="324" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4B-Nb-bhI">
                                 <rect key="frame" x="45" y="78" width="324" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-xr-jbd">
+                                <rect key="frame" x="45" y="148" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydT-al-ovV">
+                                <rect key="frame" x="158" y="807" width="98" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="mKd-JG-qdf"/>
+                                    <constraint firstAttribute="width" constant="98" id="qtm-y7-AqI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grR-24-Cg1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,8 +53,10 @@
                             <constraint firstItem="QIK-xr-jbd" firstAttribute="top" secondItem="z4B-Nb-bhI" secondAttribute="bottom" constant="36" id="aO9-1E-SSE"/>
                             <constraint firstItem="QIK-xr-jbd" firstAttribute="centerX" secondItem="DgR-bi-Hil" secondAttribute="centerX" id="eNm-GM-8py"/>
                             <constraint firstItem="z4B-Nb-bhI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="f7X-hS-MFK"/>
+                            <constraint firstItem="ydT-al-ovV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hSM-La-RBB"/>
                             <constraint firstItem="z4B-Nb-bhI" firstAttribute="leading" secondItem="QIK-xr-jbd" secondAttribute="leading" id="n1S-7B-E6b"/>
-                            <constraint firstItem="DgR-bi-Hil" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qrN-el-Us3"/>
+                            <constraint firstItem="DgR-bi-Hil" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-85" id="qrN-el-Us3"/>
+                            <constraint firstItem="ydT-al-ovV" firstAttribute="top" secondItem="DgR-bi-Hil" secondAttribute="bottom" constant="30" id="xDc-M6-nzg"/>
                         </constraints>
                     </view>
                     <connections>
