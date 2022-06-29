@@ -16,6 +16,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBOutlet weak var nameTextfield: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
+    var selectedTitle = ""
+    var selectedTitleID: UUID?
+    
     var locationManager = CLLocationManager()
     
     var chosenLatitude:Double?
@@ -34,6 +37,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation))
         gestureRecognizer.minimumPressDuration = 2
         mapView.addGestureRecognizer(gestureRecognizer)
+        
+        
+        if selectedTitle != ""{
+            //Core Data
+            
+            let stringUUID = selectedTitleID!.uuidString
+            print(stringUUID)
+            
+            
+        }
+        else{
+            
+            //Add new Data
+        }
         
     }
     
